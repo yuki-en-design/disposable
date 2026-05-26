@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>総探 チーム分け設計 議論スライド</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+          "Noto Sans JP", sans-serif;
+        background: #f4f3ef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 2rem;
+      }
+      .slide {
+        background: white;
+        border-radius: 12px;
+        border: 0.5px solid #ddd;
+        padding: 2rem 2rem 1.75rem;
+        width: 100%;
+        max-width: 860px;
+      }
+      .eyebrow {
+        font-size: 11px;
+        color: #999;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.2rem;
+      }
+      h1 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #111;
+        margin-bottom: 0.25rem;
+      }
+      .lead {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 1.75rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 1.25rem;
+      }
+      .box {
+        border-radius: 8px;
+        padding: 1rem 1.25rem;
+      }
+      .box-gray {
+        background: #f7f6f3;
+      }
+      .box-orange {
+        background: #faece7;
+        border: 1.5px solid #f0997b;
+      }
+      .box-label {
+        font-size: 11px;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.6rem;
+      }
+      .box-gray .box-label {
+        color: #999;
+      }
+      .box-orange .box-label {
+        color: #993c1d;
+      }
+      ul {
+        padding-left: 1rem;
+        font-size: 13px;
+        line-height: 2.1;
+      }
+      .box-gray ul {
+        color: #222;
+      }
+      .box-orange ul {
+        color: #3c2218;
+      }
+      .timeline-label {
+        font-size: 11px;
+        color: #999;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.75rem;
+        border-top: 0.5px solid #eee;
+        padding-top: 1rem;
+      }
+      .timeline {
+        display: flex;
+        align-items: flex-start;
+      }
+      .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+      }
+      .bar {
+        width: 100%;
+        height: 4px;
+      }
+      .step-date {
+        font-size: 11px;
+        font-weight: 500;
+        color: #111;
+        margin-top: 6px;
+        white-space: nowrap;
+      }
+      .step-text {
+        font-size: 11px;
+        color: #666;
+        text-align: center;
+        margin-top: 2px;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide">
+      <div class="eyebrow">2026 総合的な探究の時間</div>
+      <h1>本格探究チーム分けの設計 — 先生方と確認したいこと</h1>
+      <p class="lead">
+        お試し探究を終えた生徒たちが、夏休みの個人調査に向けて動き出すフェーズです。
+      </p>
+
+      <div class="grid">
+        <div class="box box-gray">
+          <div class="box-label">今現在決まっていること（変更ありうる）</div>
+          <ul>
+            <li>14の問いから選ぶ方式（＋新問い追加の余地あり）</li>
+            <li>高1×2～3・中3×2～3の4～5人混成チーム</li>
+            <li>カテゴリー → 問い → キーワードの3段階フォーム</li>
+            <li>A3カードを使った生徒自発のマッチング</li>
+            <li>夏休みまでに3回（6/30・7/7・7/14）</li>
+          </ul>
+        </div>
+
+        <div class="box box-orange">
+          <div class="box-label">先生方に議論してほしいこと</div>
+          <ul>
+            <li>「問いが固定されている」ことへの懸念、どう答えるか</li>
+            <li>マッチング当日、教員はどこまで介入するか</li>
+            <li>同じ問いに人数が偏った場合、どう調整するか</li>
+            <li>
+              中学生と高校生が初対面でうまく動けるか、言語・関係の壁への対応は
+            </li>
+            <li>夏休みに動かない生徒が出たとき、チームと担当はどう動くか</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-label">スケジュール</div>
+      <div class="timeline">
+        <div class="step">
+          <div
+            class="bar"
+            style="background: #afa9ec; border-radius: 2px 0 0 2px"
+          ></div>
+          <div class="step-date">5/29（金）</div>
+          <div class="step-text">事前アンケート<br />配信</div>
+        </div>
+        <div class="step">
+          <div class="bar" style="background: #afa9ec"></div>
+          <div class="step-date">6/4（木）</div>
+          <div class="step-text">新問い確定<br />教員精査</div>
+        </div>
+        <div class="step">
+          <div class="bar" style="background: #7f77dd"></div>
+          <div class="step-date">6/9（火）</div>
+          <div class="step-text">発表会・<br />フォーム配信</div>
+        </div>
+        <div class="step">
+          <div class="bar" style="background: #d85a30"></div>
+          <div class="step-date">6/30（火）</div>
+          <div class="step-text">チーム決め<br />マッチング</div>
+        </div>
+        <div class="step">
+          <div class="bar" style="background: #993c1d"></div>
+          <div class="step-date">7/7（火）</div>
+          <div class="step-text">調査計画<br />作成</div>
+        </div>
+        <div class="step">
+          <div
+            class="bar"
+            style="background: #712b13; border-radius: 0 2px 2px 0"
+          ></div>
+          <div class="step-date">7/14（火）</div>
+          <div class="step-text">何をしてくるか宣言<br />夏休みへ</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
